@@ -3,10 +3,49 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/mdb.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet">
+        {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <nav id="nav-wrap">
+{# 
+               <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+               <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a> #}
+
+               <ul id="nav" className="nav">
+                  <li className="current"><a className="smoothscroll" href="#home">Acceuil</a></li>
+                  <li><a className="smoothscroll" href="#about">A mon propos</a></li>
+                  <li><a className="smoothscroll" href="#resume">Formations</a></li>
+                  <li><a className="smoothscroll" href="#portfolio">Expériences</a></li>
+                  <li><a className="smoothscroll" href="#contact">Contact</a></li>
+               </ul>
+
+            </nav>
+
+        <div class="bg-image"></div>
+
+        <div class="bg-text">
+            <h2>Bonjour, je m'appelle</h2>
+            <h1 style="font-size:80px">Leila R</h1>
+            <p>Et je suis développeur Web</p> 
+        </div>
+        {% block body %}
+        {% endblock %}
+
+
+        {% block javascripts %}
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+        <!-- Bootstrap tooltips -->
+        <script type="text/javascript" src="js/popper.min.js"></script>
+        <!-- Bootstrap core JavaScript -->
+        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <!-- MDB core JavaScript -->
+        <script type="text/javascript" src="js/mdb.min.js"></script>
+        {% endblock %}
     </body>
 </html>
