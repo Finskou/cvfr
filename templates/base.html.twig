@@ -5,7 +5,7 @@
         <title>{% block title %}Welcome!{% endblock %}</title>
         {% block stylesheets %}
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Cormorant+Garamond&display=swap" rel="stylesheet">
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/mdb.min.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
@@ -18,11 +18,12 @@
                <a className="mobile-btn" href="#home" title="Hide navigation">Hide navigation</a> #}
 
                <ul id="nav" className="nav">
-                  <li className="current"><a className="smoothscroll" href="#home">Acceuil</a></li>
-                  <li><a className="smoothscroll" href="#about">A mon propos</a></li>
-                  <li><a className="smoothscroll" href="#resume">Formations</a></li>
-                  <li><a className="smoothscroll" href="#portfolio">Expériences</a></li>
-                  <li><a className="smoothscroll" href="#contact">Contact</a></li>
+                  <li className="current"><a href="{{ path('page') }}">Acceuil</a></li>
+                  <li><a href="{{ path('page') }}">A mon propos</a></li>
+                  <li><a href="#resume">Formations</a></li>
+                  <li><a href="#experience">Expériences</a></li>
+                  <li><a href="#portfolio">Portfolio</a></li>
+                  <li><a href="#contact">Contact</a></li>
                </ul>
 
             </nav>

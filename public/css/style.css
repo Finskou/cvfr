@@ -15,6 +15,25 @@ height: 100%;
   background-attachment:fixed;
 }
 
+.bg-image2{
+  background-size: 35% auto;
+  background-image: url('../img/dead.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  filter:blur(1px);
+  -webkit-filter: blur(1px);
+  height:50vh;
+}
+
+.profile-pic {
+  position: relative;
+  /* margin-top: 20px; */
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+  float:left;
+  margin:1%;
+}
 .navbar{
   background: rgb(255,255,255);
   /* background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(0,0,0,1) 100%); */
@@ -111,4 +130,12 @@ ul#nav li a:active {
 
 ul#nav li.current a {
   color: #F06000;
+}
+
+
+/*************************About Section****************************/
+.about {
+  font-family: 'Cormorant Garamond' ;
+  font-size:1.4rem;
+  font-weight:bold;
 }
