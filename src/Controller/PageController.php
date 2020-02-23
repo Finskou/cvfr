@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class PageController extends AbstractController
 {
     /**
-     * @Route("/page", name="page")
+     * @Route("/", name="page")
      */
     public function index()
     {
@@ -17,5 +17,13 @@ class PageController extends AbstractController
         ]);
     }
 
-
+    /**
+     * @Route("/about", name="about")
+     */
+    public function about()
+    {
+        return $this->render('page/apropos.html.twig', [
+            'controller_name' => 'PageController',
+        ]);
+    }
 }
