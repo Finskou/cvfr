@@ -11,7 +11,7 @@
         <link href="css/style.css" rel="stylesheet">
         {% endblock %}
     </head>
-    <body class="container">
+    <body class="container-fluid">
         <nav id="nav-wrap">
 {# 
                <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
@@ -23,7 +23,7 @@
                   <li><a href="#resume">Formations</a></li>
                   <li><a href="#experience">Expériences</a></li>
                   <li><a href="#portfolio">Portfolio</a></li>
-                  <li><a href="#contact">Contact</a></li>
+                  <li><a href="{{ path('contact') }}">Contact</a></li>
                </ul>
 
             </nav>
@@ -38,7 +38,7 @@
         {% block body %}
         {% endblock %}
 
-        <footer class="page-footer font-small mdb-color darken-4">
+        <footer class=" position-fixed page-footer font-small mdb-color darken-4 w-100" style="height:18%">
         <div class="container">
             <div class="row">
             <div class="col-md-12 py-5">
