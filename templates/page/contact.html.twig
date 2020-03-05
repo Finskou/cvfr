@@ -2,12 +2,23 @@
 
 
 {% block body %}
+<style>
+.bg-image-contact{
+  background-size:auto;
+  background-image: url('../img/bali.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  filter:blur(2px);
+  -webkit-filter: blur(2px);
+  bottom:0;
+  height:100vh;
+  position:relative;
+}
+</style>
 
-<div class="card">
-  <h1>Contactez-moi</h1>
-</div>
+<div class="bg-image-contact"></div>
 
-<div class="bg-text" style="margin-top:60vh; z-index:auto">
+<div class="bg-text" style="margin-top:60vh">
   {{ form(form) }}
 </div>
 {% endblock %}

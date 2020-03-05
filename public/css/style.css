@@ -15,14 +15,16 @@ height: 100%;
   background-attachment:fixed;
 }
 
-.bg-image2{
-  background-size: 35% auto;
-  background-image: url('../img/dead.jpg');
+.bg-image-contact{
+  background-size:cover;
+  background-image: url('../img/bali.jpg');
   background-repeat:no-repeat;
   background-attachment: fixed;
-  filter:blur(1px);
-  -webkit-filter: blur(1px);
-  height:50vh;
+  filter:blur(2px);
+  -webkit-filter: blur(2px);
+  bottom:0;
+  height:100vh;
+  position:relative;
 }
 
 .bg-image-about{
@@ -77,12 +79,6 @@ height: 100%;
 /* primary navigation
 --------------------------------------------------------------------- */
 
-#nav-wrap ul, #nav-wrap li, #nav-wrap a {
-  margin: 0;
-  padding: 0;
-  border: none;
-  outline: none;
-}
 
 /* nav-wrap */
 #nav-wrap {
@@ -97,15 +93,6 @@ height: 100%;
   top: 0;
 }
 
-.opaque {
-  background-color: #333;
-}
-
-/* hide toggle button */
-
-#nav-wrap>a.mobile-btn {
-  display: none;
-}
 
 ul#nav {
   min-height: 48px;
@@ -146,24 +133,6 @@ ul#nav li.current a {
   color: #F06000;
 }
 
-/***************************About ******************/
-
-.scrollbar-rare-wind::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  background-color: #F5F5F5;
-  border-radius: 10px; }
-  
-  .scrollbar-rare-wind::-webkit-scrollbar {
-  width: 12px;
-  background-color: #F5F5F5; }
-  
-  .scrollbar-rare-wind::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
-  background-image: -webkit-gradient(linear, left bottom, left top, from(#a8edea), to(#fed6e3));
-  background-image: -webkit-linear-gradient(bottom, #a8edea 0%, #fed6e3 100%);
-  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%); }
-  
-  .scrollbar-rare-wind {
-  scrollbar-color: #a8edea #F5F5F5;
-  }
+ul#nav li a:hover {
+  color: #F06000;
+}
