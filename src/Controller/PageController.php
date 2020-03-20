@@ -40,14 +40,14 @@ class PageController extends AbstractController
     public function new(Request $request)
     {
         $foorm = new Form();
-        $foorm -> setTitle('Titre');
-        $foorm -> setContent('Votre message');
-        $foorm -> setEmail('Votre e-mail');
+        // $foorm -> setTitle('Titre');
+        // $foorm -> setContent('Votre message');
+        // $foorm -> setEmail('Votre e-mail');
     
         $form = $this->createFormBuilder($foorm)
-                        ->add('title', TextType::class)
-                        ->add('content', TextareaType::class)
-                        ->add('email', EmailType::class)
+                        ->add('title', TextType::class, ['label' => 'Titre'])
+                        ->add('content', TextareaType::class, ['label' => 'Votre message'])
+                        ->add('email', EmailType::class, ['label' => 'E-mail'])
                         ->add('send', SubmitType::class, ['label' => 'Envoyer'])
                         ->getForm();
 
