@@ -24,6 +24,7 @@ class PageController extends AbstractController
         ]);
     }
 
+   
     /**
      * @Route("/about", name="about")
      */
@@ -44,16 +45,32 @@ class PageController extends AbstractController
         // $foorm -> setContent('Votre message');
         // $foorm -> setEmail('Votre e-mail');
     
-        $form = $this->createFormBuilder($foorm)
-                        ->add('title', TextType::class, ['label' => 'Titre'])
-                        ->add('content', TextareaType::class, ['label' => 'Votre message'])
-                        ->add('email', EmailType::class, ['label' => 'E-mail'])
-                        ->add('send', SubmitType::class, ['label' => 'Envoyer'])
-                        ->getForm();
+        // $form = $this->createFormBuilder($foorm)
+        //                 ->add('title', TextType::class, ['label' => 'Titre'])
+        //                 ->add('content', TextareaType::class, ['label' => 'Votre message'])
+        //                 ->add('email', EmailType::class, ['label' => 'E-mail'])
+        //                 ->add('send', SubmitType::class, ['label' => 'Envoyer'])
+        //                 ->getForm();
 
-        return $this->render('page/contact.html.twig', [
-            'form' => $form->createView(),
+        return $this->render('page/contact.html.twig');
+    }
+
+    /**
+     * @Route("/education", name="education")
+     */
+    public function edu() 
+    {
+        return $this->render('page/education.html.twig', [
+            'controller_name' => 'PageController',
         ]);
     }
    
+     /**
+     * @Route("/login", name="login") 
+     */
+    public function login() 
+    {
+        return $this->render('security/login.html.twig');
+    }
+
 }
