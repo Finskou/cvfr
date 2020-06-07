@@ -10,6 +10,9 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+
+use App\Entity\Contact;
 
 
 class PageController extends AbstractController
@@ -38,21 +41,21 @@ class PageController extends AbstractController
     /**
      * @Route("/contact", name="contact")
      */
-    public function new(Request $request)
+    public function createAction(Request $request)
     {
-        $foorm = new Form();
-        // $foorm -> setTitle('Titre');
-        // $foorm -> setContent('Votre message');
-        // $foorm -> setEmail('Votre e-mail');
-    
-        // $form = $this->createFormBuilder($foorm)
-        //                 ->add('title', TextType::class, ['label' => 'Titre'])
-        //                 ->add('content', TextareaType::class, ['label' => 'Votre message'])
-        //                 ->add('email', EmailType::class, ['label' => 'E-mail'])
-        //                 ->add('send', SubmitType::class, ['label' => 'Envoyer'])
-        //                 ->getForm();
+        $contact = new Contact();
+        $form = $this->createFormBuilder($contact)
+            ->add('Name', TextType::class, array('label' => 'name', 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
+            ->add('Email', TextType::class, array('label' => 'email', 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
+            ->add('Sujet', TextType::class, array('label' => 'sujet', 'attr' => array('class' => 'form-control', 'style' => 'margin-bottom:15px')))
+            ->add('Message', TextareaType::class, array('label' => 'message', 'attr' => array('class' => 'form-control')))
+            ->add('Envoyer', SubmitType::class, array('label' => 'submit', 'attr' => array('class' => 'btn btn-dark', 'style' => 'margin-top:15px')))
+            ->getForm();
 
-        return $this->render('page/contact.html.twig');
+            $form->handleRequest($request);
+
+        return $this->render('page/contact.html.twig', [ 
+            'form' => $form]);
     }
 
     /**

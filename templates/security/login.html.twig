@@ -16,23 +16,42 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 2;
-  width: 50%;
+  width: 30vw;
   padding: 20px;
   text-align: center;
-  font-family: 'Patrick Hand', cursive ;
+  font-family: 'Ubuntu Condensed', sans-serif;
   font-size: 1.2em;
   overflow:auto;
 }
 
 .return {
-    margin-top: 15vh;
+    margin-top: -75vh;
+    z-index:1;
+    position:absolute;
+}
+.dead{
+  background-image: url('../img/dead.jpg');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position:center;
+  bottom:0;
+  height:90vh;
+  position:relative;
 }
 </style>
 
+<div class="dead"></div>
+    <div class="return">
+        <button class="btn btn-lg btn-danger " type="return"><a href="{{ path('page') }}" style="color:white">
+                Retour à l'acceuil
+                </a>
+        </button>
+    </div>
+
 <form method="post">
-    {% if error %}
+    {# {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
-    {% endif %}
+    {% endif %} #}
 
     {% if app.user %}
         <div class="mb-3">
@@ -44,7 +63,7 @@
     <div class="about-text">
         <h1 class="h3 mb-3 font-weight-normal red">Accès Admin</h1>
         <label for="inputEmail">Email</label>
-        <input type="email"  value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
+        <input type="email"  name="email" id="inputEmail" class="form-control" required autofocus>
         <label for="inputPassword">Mot de passe</label>
         <input type="password" name="password" id="inputPassword" class="form-control" required>
 
@@ -58,10 +77,5 @@
     </div>
 </form>
 
-    <div class="return">
-        <button class="btn btn-lg btn-red" type="return"><a href="{{ path('page') }}" style="color:white">
-                Retour à l'acceuil
-                </a>
-        </button>
-    </div>
+
 {% endblock %}
