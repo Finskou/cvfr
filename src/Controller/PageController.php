@@ -68,6 +68,31 @@ class PageController extends AbstractController
         ]);
     }
    
+    /**
+     * @Route("/outils", name="outils")
+     */
+    public function skills() 
+    {
+        return $this->render('page/outils.html.twig', [
+            'controller_name' => 'PageController'
+        ]);
+    }
+
+    /**
+     * @Route("/portfolio", name="portfolio")
+     */
+    public function port()
+    {
+        return $this->render('page/portfolio.html.twig');
+    }
+
+    /**
+     * @Route("/exp", name="experience")
+     */
+    public function exp()
+    {
+        return $this->render('page/experience.html.twig');
+    }
      /**
      * @Route("/login", name="login") 
      */
