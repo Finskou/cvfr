@@ -13,29 +13,30 @@
   height:100vh;
   position:relative;
 }
-
-.bg-text { 
-  background-color: rgba(255, 255, 255, 0.514);
-  height:auto;
-  color: black;
-  border: 2px solid #ffffff;
+.bgg-text {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(255, 255, 255, 0.514);see-through */
+  color: white;
+  border: 3px solid #f1f1f1;
   border-radius:3px;
   position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   z-index: 2;
-  width: 90%;
+  width: 80%;
   padding: 10px;
-  font-family: 'Patrick Hand', cursive ;
-  font-size: 1.4em;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  font-size: 1em;
   overflow:auto;
 }
-
 </style>
 
 <div class="bg-image-edu">
  </div>
     
-<div class="accordion" id="accordionExample">
-  <div class=" bg-text card z-depth-0 bordered">
+<div class="d-flex  absolute accordion" id="accordionExample">
+  <div class="bgg-text card z-depth-0 bordered">
     <div class="card-header" id="headingOne">
       <h5 class="mb-0">
         <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><img src="../img/wild.png" style="height:auto; width:50%" alt="wildcodeschool"></button>
@@ -44,31 +45,34 @@
     <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
       data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-        nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-        labore sustainable.
+        <p>Formation intensive de quelques mois pour apprendre à concevoir et développer une application web, intégrer les méthodes AGILE de gestion de projet, comprendre et formaliser les besoins d’un client et donner du feedback clair et constructif. Acquisition d'HTML, CSS, Bootstrap, ainsi que le langage et framework : Javascript / React JS /
+NodeJS.</p>
       </div>
     </div>
   </div>
-  <div class=" bg-text card z-depth-0 bordered" style="margin-top:20vh">
+  <div class=" bgg-text card z-depth-0 bordered" style="margin-top:30vh">
     <div class="card-header" id="headingTwo">
       <h5 class="mb-0">
-        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><img src="../img/AFPA.jpg" style="height:auto; width:50%" alt="afpa"></button>
+        <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo"><img src="../img/AFPA.jpg" style="height:auto; width:30%" alt="afpa"></button>
       </h5>
     </div>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
       <div class="card-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3
-        wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-        eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla
-        assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred
-        nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer
-        farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus
-        labore sustainable.
+        <i>Développer la partie front-end d’une application web ou web mobile en intégrant les recommandations de sécurité :
+        <li>maquettage d'une application</li>
+        <li>Réalisation d'une interface</li>
+        <li>utilisateur web statique et adaptable</li>
+        <li>Développement d'une interface utilisateur web dynamique</li>
+        <li>Réalisation d'une interface utilisateur avec une solution de gestion de contenu ou e-commerce.</li></i>
+
+        <i>Développer la partie back-end d’une application web ou
+web mobile en intégrant les recommandations de sécurité :
+        <li>Création d'une base de données</li>
+        <li>Développement des composants d’accès aux données</li>
+        <li>Développement de la partie back-end d’une
+application web ou web mobile</li>
+        <li>Elaboration et mise en oeuvre des composants dans une application de gestion de contenu ou ecommerce.</li>
+</i>
       </div>
     </div>
   </div>
