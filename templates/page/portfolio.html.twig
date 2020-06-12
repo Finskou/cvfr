@@ -1,7 +1,42 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+<style>
+.bg-image-edu{
+  background-size:cover;
+  background-image: url('../img/bg.png');
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  bottom:0;
+  position:relative;
+  height:100vh;
+}
+.head{
+  padding-top:10vh;
+  font-family: 'Amatic SC' ;
+  font-weight:bold;
+  font-size:4rem;
+}
+</style>
 
-<h1> En construction </h1>
 
+
+
+
+
+<div class="bg-image-edu">
+<div class="d-flex">
+  <div class="col-md-6">
+    <center><h2 class="head">Projets Wild Code School</h2>
+      <a href="https://siouplait.github.io/order/" target="_blank"><img class="m-5" src="../img/siouplai.PNG" alt="siouplai" height="250"></a>
+      <a href="https://github.com/WildCodeSchool/paris-0218-wild-source" target="_blank">Paris Wild Source</a></center>
+  </div>
+  <div class="col-md-6" style="border-left:1px white solid">
+    <center><h1 class="head">Projet AFPA</h1>
+    <a href="https://siouplait.github.io/order/" target="_blank"><img class="m-5" src="../img/othelologo.PNG" alt="othello" height="50"></a> 
+    <a href="https://www.zupimages.net/viewer.php?id=19/30/b62p.png" target="_blank"><img class="m-5" src="../img/banksy.png" alt="banksy" height="200"></a></center>
+  </div>
+  </div>
+</div>
 {% endblock %}
+
